@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MyBrand - Bootstrap Landing Page</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <style>
+        /* ==============================
+           GENERAL
+        ============================== */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* ==============================
+           NAVBAR
+        ============================== */
+
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        /* ==============================
+           HERO
+        ============================== */
+
+        .hero {
+            min-height: 550px;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(
+                135deg,
+                #0d6efd,
+                #6610f2
+            );
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 650px;
+            margin: 20px auto;
+        }
+
+        .hero-buttons .btn {
+            padding: 12px 28px;
+            margin: 5px;
+            border-radius: 30px;
+        }
+
+        /* ==============================
+           SERVICES
+        ============================== */
+
+        .services {
+            background-color: #f8f9fa;
+        }
+
+        .section-title {
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .section-description {
+            color: #6c757d;
+            margin-bottom: 40px;
+        }
+
+        .service-card {
+            height: 100%;
+            border: none;
+            border-radius: 15px;
+            transition: 0.3s;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 20px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background-color: #e7f1ff;
+            color: #0d6efd;
+
+            font-size: 30px;
+        }
+
+        /* ==============================
+           ABOUT
+        ============================== */
+
+        .about {
+            padding: 80px 0;
+        }
+
+        .about-icon {
+            font-size: 45px;
+            color: #0d6efd;
+        }
+
+        /* ==============================
+           CTA
+        ============================== */
+
+        .cta {
+            background-color: #0d6efd;
+            color: white;
+            padding: 70px 0;
+        }
+
+        .cta h2 {
+            font-weight: 700;
+        }
+
+        /* ==============================
+           FOOTER
+        ============================== */
+
+        footer {
+            background-color: #212529;
+            color: white;
+        }
+
+        footer a {
+            color: #adb5bd;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        /* ==============================
+           RESPONSIVE
+        ============================== */
+
+        @media (max-width: 768px) {
+
+            .hero {
+                min-height: 500px;
+            }
+
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .about {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ==========================================
+         NAVBAR
+    =========================================== -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+
+        <div class="container">
+
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-rocket-takeoff"></i>
+                MyBrand
+            </a>
+
+            <!-- Mobile menu button -->
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            Trang chủ
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">
+                            Giới thiệu
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">
+                            Dịch vụ
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">
+                            Liên hệ
+                        </a>
+                    </li>
+
+                </ul>
+
+                <a href="#services" class="btn btn-primary ms-lg-3">
+                    Bắt đầu ngay
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ==========================================
+         HERO SECTION
+    =========================================== -->
+
+    <header class="hero text-white text-center">
+
+        <div class="container">
+
+            <div class="row justify-content-center">
+
+                <div class="col-lg-9">
+
+                    <h1>
+                        Xây dựng tương lai
+                        <br>
+                        cùng MyBrand
+                    </h1>
+
+                    <p>
+                        Giải pháp công nghệ hiện đại giúp doanh nghiệp
+                        phát triển mạnh mẽ, tối ưu hiệu quả và tiếp cận
+                        khách hàng tốt hơn.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a
+                            href="#services"
+                            class="btn btn-light btn-lg"
+                        >
+                            <i class="bi bi-stars"></i>
+                            Khám phá ngay
+                        </a>
+
+                        <a
+                            href="#contact"
+                            class="btn btn-outline-light btn-lg"
+                        >
+                            Liên hệ với chúng tôi
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ==========================================
+         ABOUT SECTION
+    =========================================== -->
+
+    <section id="about" class="about">
+
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-md-6 mb-4 mb-md-0">
+
+                    <h2 class="section-title">
+                        Giải pháp dành cho doanh nghiệp
+                    </h2>
+
+                    <p class="text-muted">
+                        MyBrand cung cấp các giải pháp công nghệ
+                        giúp doanh nghiệp xây dựng hình ảnh chuyên nghiệp
+                        trên môi trường số.
+                    </p>
+
+                    <p class="text-muted">
+                        Với đội ngũ giàu kinh nghiệm, chúng tôi luôn
+                        tập trung vào chất lượng, trải nghiệm người dùng
+                        và hiệu quả thực tế.
+                    </p>
+
+                    <a href="#services" class="btn btn-primary">
+                        Tìm hiểu thêm
+                    </a>
+
+                </div>
+
+                <div class="col-md-6 text-center">
+
+                    <i class="bi bi-laptop about-icon"></i>
+
+                    <h3 class="mt-3">
+                        Công nghệ hiện đại
+                    </h3>
+
+                    <p class="text-muted">
+                        Thiết kế đẹp, tốc độ nhanh và tương thích
+                        trên mọi thiết bị.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         SERVICES SECTION
+    =========================================== -->
+
+    <section id="services" class="services py-5">
+
+        <div class="container">
+
+            <!-- Title -->
+
+            <div class="text-center">
+
+                <h2 class="section-title">
+                    Dịch vụ của chúng tôi
+                </h2>
+
+                <p class="section-description">
+                    Những giải pháp giúp doanh nghiệp phát triển
+                    trong thời đại số.
+                </p>
+
+            </div>
+
+
+            <!-- Bootstrap Grid -->
+
+            <div class="row g-4">
+
+                <!-- CARD 1 -->
+
+                <div class="col-12 col-md-6 col-lg-4">
+
+                    <div class="card service-card p-4 text-center">
+
+                        <div class="card-body">
+
+                            <div class="service-icon">
+                                <i class="bi bi-code-slash"></i>
+                            </div>
+
+                            <h3 class="card-title">
+                                Thiết kế Web
+                            </h3>
+
+                            <p class="card-text text-muted">
+                                Xây dựng website hiện đại,
+                                responsive và tối ưu trải nghiệm
+                                người dùng.
+                            </p>
+
+                            <a
+                                href="#contact"
+                                class="btn btn-outline-primary"
+                            >
+                                Xem thêm
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CARD 2 -->
+
+                <div class="col-12 col-md-6 col-lg-4">
+
+                    <div class="card service-card p-4 text-center">
+
+                        <div class="card-body">
+
+                            <div class="service-icon">
+                                <i class="bi bi-graph-up-arrow"></i>
+                            </div>
+
+                            <h3 class="card-title">
+                                SEO & Marketing
+                            </h3>
+
+                            <p class="card-text text-muted">
+                                Tăng khả năng tiếp cận khách hàng
+                                và nâng cao thương hiệu trên Internet.
+                            </p>
+
+                            <a
+                                href="#contact"
+                                class="btn btn-outline-primary"
+                            >
+                                Xem thêm
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CARD 3 -->
+
+                <div class="col-12 col-md-6 col-lg-4">
+
+                    <div class="card service-card p-4 text-center">
+
+                        <div class="card-body">
+
+                            <div class="service-icon">
+                                <i class="bi bi-headset"></i>
+                            </div>
+
+                            <h3 class="card-title">
+                                Hỗ trợ 24/7
+                            </h3>
+
+                            <p class="card-text text-muted">
+                                Đội ngũ hỗ trợ luôn sẵn sàng giải đáp
+                                và xử lý vấn đề của khách hàng.
+                            </p>
+
+                            <a
+                                href="#contact"
+                                class="btn btn-outline-primary"
+                            >
+                                Xem thêm
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         CTA SECTION
+    =========================================== -->
+
+    <section id="contact" class="cta text-center">
+
+        <div class="container">
+
+            <h2>
+                Bạn đã sẵn sàng bắt đầu?
+            </h2>
+
+            <p class="lead my-4">
+                Hãy liên hệ với chúng tôi ngay hôm nay
+                để nhận được tư vấn tốt nhất.
+            </p>
+
+            <a href="mailto:contact@mybrand.com"
+               class="btn btn-light btn-lg">
+                <i class="bi bi-envelope"></i>
+                Liên hệ ngay
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         FOOTER
+    =========================================== -->
+
+    <footer class="py-4">
+
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-md-6 text-center text-md-start">
+
+                    <p class="mb-0">
+                        &copy; 2026 MyBrand.
+                        All rights reserved.
+                    </p>
+
+                </div>
+
+                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+
+                    <a href="#" class="me-3">
+                        Facebook
+                    </a>
+
+                    <a href="#" class="me-3">
+                        Instagram
+                    </a>
+
+                    <a href="#">
+                        Contact
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Bootstrap JavaScript -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+</body>
+</html>
