@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>SmartLife - Landing Page</title>
+
+
+    <!-- ==========================================
+         BOOTSTRAP 5 CSS
+    =========================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    >
+
+
+    <!-- ==========================================
+         BOOTSTRAP ICONS
+    =========================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+
+    <!-- ==========================================
+         CUSTOM CSS
+    =========================================== -->
+
+    <style>
+
+        /* ===============================
+           GENERAL
+        ================================ */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #212529;
+        }
+
+
+        /* ===============================
+           NAVBAR
+        ================================ */
+
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+
+        /* ===============================
+           HERO / BANNER
+        ================================ */
+
+        .hero-section {
+            min-height: 600px;
+
+            display: flex;
+            align-items: center;
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    rgba(13, 110, 253, 0.75),
+                    rgba(102, 16, 242, 0.75)
+                ),
+                url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=80");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-section h1 {
+            font-size: 3.8rem;
+            font-weight: 700;
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 20px auto;
+        }
+
+        .hero-section .btn {
+            padding: 13px 30px;
+            border-radius: 30px;
+        }
+
+
+        /* ===============================
+           SECTION TITLE
+        ================================ */
+
+        .section-title {
+            font-weight: 700;
+        }
+
+        .section-description {
+            color: #6c757d;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+
+        /* ===============================
+           INTRODUCTION
+        ================================ */
+
+        .intro-section {
+            padding: 90px 0;
+        }
+
+        .intro-image {
+            width: 100%;
+            border-radius: 15px;
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .intro-content h2 {
+            font-weight: 700;
+        }
+
+        .intro-content p {
+            color: #6c757d;
+            line-height: 1.8;
+        }
+
+
+        /* ===============================
+           FEATURES
+        ================================ */
+
+        .features-section {
+            padding: 90px 0;
+            background-color: #f8f9fa;
+        }
+
+        .feature-card {
+            height: 100%;
+            padding: 30px;
+
+            background-color: white;
+
+            border: none;
+            border-radius: 15px;
+
+            text-align: center;
+
+            box-shadow:
+                0 5px 20px rgba(0, 0, 0, 0.07);
+
+            transition: 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .feature-icon {
+            width: 75px;
+            height: 75px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin: 0 auto 20px;
+
+            border-radius: 50%;
+
+            background-color: #e7f1ff;
+            color: #0d6efd;
+
+            font-size: 32px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .feature-card p {
+            color: #6c757d;
+        }
+
+
+        /* ===============================
+           CTA
+        ================================ */
+
+        .cta-section {
+            padding: 80px 0;
+
+            background: linear-gradient(
+                135deg,
+                #0d6efd,
+                #6610f2
+            );
+
+            color: white;
+        }
+
+        .cta-section h2 {
+            font-weight: 700;
+        }
+
+        .cta-section .btn {
+            padding: 13px 35px;
+            border-radius: 30px;
+        }
+
+
+        /* ===============================
+           FOOTER
+        ================================ */
+
+        footer {
+            background-color: #212529;
+            color: white;
+            padding: 30px 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+
+        /* ===============================
+           RESPONSIVE
+        ================================ */
+
+        @media (max-width: 768px) {
+
+            .hero-section {
+                min-height: 500px;
+                text-align: center;
+            }
+
+            .hero-section h1 {
+                font-size: 2.4rem;
+            }
+
+            .hero-section p {
+                font-size: 1rem;
+            }
+
+            .intro-section,
+            .features-section,
+            .cta-section {
+                padding: 60px 0;
+            }
+
+        }
+
+
+        @media (max-width: 576px) {
+
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+
+            .hero-section .btn {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         NAVBAR
+    =========================================== -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+
+        <div class="container">
+
+            <!-- Logo -->
+
+            <a
+                class="navbar-brand text-primary"
+                href="#"
+            >
+
+                <i class="bi bi-lightning-charge-fill"></i>
+
+                SmartLife
+
+            </a>
+
+
+            <!-- Mobile Toggle -->
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu"
+            >
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <!-- Menu -->
+
+            <div
+                class="collapse navbar-collapse"
+                id="navbarMenu"
+            >
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link active"
+                            href="#home"
+                        >
+                            Trang chủ
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="#about"
+                        >
+                            Giới thiệu
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="#features"
+                        >
+                            Tính năng
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="#contact"
+                        >
+                            Liên hệ
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ==========================================
+         HERO / BANNER
+    =========================================== -->
+
+    <header
+        id="home"
+        class="hero-section"
+    >
+
+        <div class="container">
+
+            <div class="row justify-content-center">
+
+                <div class="col-lg-9 text-center">
+
+                    <h1>
+                        Công Nghệ
+                        <br>
+                        Cho Cuộc Sống Thông Minh
+                    </h1>
+
+
+                    <p>
+                        SmartLife mang đến những giải pháp công nghệ
+                        hiện đại giúp bạn làm việc hiệu quả hơn,
+                        tiết kiệm thời gian và tận hưởng cuộc sống
+                        theo cách thông minh hơn.
+                    </p>
+
+
+                    <!-- CTA Button -->
+
+                    <a
+                        href="#features"
+                        class="btn btn-light btn-lg"
+                    >
+
+                        <i class="bi bi-rocket-takeoff"></i>
+
+                        Khám phá ngay
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ==========================================
+         GIỚI THIỆU
+    =========================================== -->
+
+    <section
+        id="about"
+        class="intro-section"
+    >
+
+        <div class="container">
+
+            <div class="row align-items-center g-5">
+
+
+                <!-- IMAGE -->
+
+                <div class="col-12 col-lg-6">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80"
+                        alt="SmartLife Team"
+                        class="img-fluid intro-image"
+                    >
+
+                </div>
+
+
+                <!-- CONTENT -->
+
+                <div class="col-12 col-lg-6 intro-content">
+
+                    <h2 class="mb-4">
+                        Giải pháp dành cho cuộc sống hiện đại
+                    </h2>
+
+
+                    <p>
+                        SmartLife được xây dựng với mục tiêu đưa
+                        công nghệ đến gần hơn với cuộc sống hàng ngày.
+                    </p>
+
+
+                    <p>
+                        Chúng tôi phát triển những sản phẩm và dịch vụ
+                        đơn giản, tiện lợi, dễ sử dụng và phù hợp
+                        với nhu cầu của người dùng hiện đại.
+                    </p>
+
+
+                    <p>
+                        Với thiết kế thân thiện cùng công nghệ tiên tiến,
+                        SmartLife giúp bạn tiết kiệm thời gian và
+                        nâng cao hiệu suất công việc.
+                    </p>
+
+
+                    <a
+                        href="#features"
+                        class="btn btn-primary btn-lg mt-2"
+                    >
+
+                        Xem thêm
+
+                        <i class="bi bi-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         FEATURES
+    =========================================== -->
+
+    <section
+        id="features"
+        class="features-section"
+    >
+
+        <div class="container">
+
+
+            <!-- SECTION TITLE -->
+
+            <div class="text-center mb-5">
+
+                <h2 class="section-title">
+                    Tính Năng Nổi Bật
+                </h2>
+
+                <p class="section-description mt-3">
+                    Những tính năng được thiết kế để mang lại
+                    trải nghiệm tốt nhất cho người dùng.
+                </p>
+
+            </div>
+
+
+            <!-- BOOTSTRAP GRID -->
+
+            <div class="row g-4">
+
+
+                <!-- FEATURE 1 -->
+
+                <div class="col-12 col-md-6 col-lg-3">
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+
+                            <i class="bi bi-lightning-charge"></i>
+
+                        </div>
+
+
+                        <h3>
+                            Nhanh chóng
+                        </h3>
+
+
+                        <p>
+                            Tối ưu tốc độ xử lý giúp bạn hoàn thành
+                            công việc nhanh chóng và hiệu quả.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FEATURE 2 -->
+
+                <div class="col-12 col-md-6 col-lg-3">
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+
+                            <i class="bi bi-phone"></i>
+
+                        </div>
+
+
+                        <h3>
+                            Responsive
+                        </h3>
+
+
+                        <p>
+                            Sử dụng thuận tiện trên máy tính,
+                            máy tính bảng và điện thoại.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FEATURE 3 -->
+
+                <div class="col-12 col-md-6 col-lg-3">
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+
+                            <i class="bi bi-shield-check"></i>
+
+                        </div>
+
+
+                        <h3>
+                            Bảo mật
+                        </h3>
+
+
+                        <p>
+                            Dữ liệu được bảo vệ với các giải pháp
+                            bảo mật hiện đại và đáng tin cậy.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FEATURE 4 -->
+
+                <div class="col-12 col-md-6 col-lg-3">
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+
+                            <i class="bi bi-headset"></i>
+
+                        </div>
+
+
+                        <h3>
+                            Hỗ trợ 24/7
+                        </h3>
+
+
+                        <p>
+                            Đội ngũ hỗ trợ luôn sẵn sàng giải đáp
+                            mọi vấn đề của khách hàng.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         CTA
+    =========================================== -->
+
+    <section
+        id="contact"
+        class="cta-section text-center"
+    >
+
+        <div class="container">
+
+            <h2>
+                Sẵn sàng trải nghiệm SmartLife?
+            </h2>
+
+
+            <p class="lead my-4">
+
+                Bắt đầu hành trình sử dụng công nghệ
+                để cuộc sống trở nên đơn giản hơn.
+
+            </p>
+
+
+            <!-- CTA BUTTON -->
+
+            <a
+                href="mailto:contact@smartlife.com"
+                class="btn btn-light btn-lg"
+            >
+
+                <i class="bi bi-person-plus"></i>
+
+                Đăng ký ngay
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         FOOTER
+    =========================================== -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-md-6 text-center text-md-start">
+
+                    <p>
+                        &copy; 2026 SmartLife.
+                        All rights reserved.
+                    </p>
+
+                </div>
+
+
+                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+
+                    <span>
+                        Made with
+                        <i class="bi bi-heart-fill text-danger"></i>
+                        Bootstrap 5
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- ==========================================
+         BOOTSTRAP JAVASCRIPT
+    =========================================== -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+</body>
+
+</html>
